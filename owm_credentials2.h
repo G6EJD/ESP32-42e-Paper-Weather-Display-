@@ -1,9 +1,9 @@
 // Change to your WiFi credentials
-const char* ssid1     = "SKYAE43F";
-const char* password1 = "QDMSWSFMQL";
+const char* ssid1     = "your SSID";
+const char* password1 = "your PASSWORD";
 
 // Use your own API key by signing up for a free developer account at https://openweathermap.org/
-String apikey       = "8f0e2239c68a60e29f69c488042d247a";                   // See: https://openweathermap.org/
+String apikey       = "your OWM key";                   // See: https://openweathermap.org/
 const char server[] = "api.openweathermap.org";
 //http://api.openweathermap.org/data/2.5/forecast?q=Melksham,UK&APPID=8f0e2239c68a60e29f69c488042d247a&mode=json&units=metric&cnt=24
 //http://api.openweathermap.org/data/2.5/forecast?q=Cardiff,GB&APPID=8f0e2239c68a60e29f69c488042d247a&mode=json&units=metric&cnt=24
