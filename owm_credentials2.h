@@ -1,6 +1,6 @@
 // Change to your WiFi credentials
-const char* ssid1     = "your SSID";
-const char* password1 = "your PASSWORD";
+const char* ssid1     = "your SSID";      // For your network
+const char* password1 = "your PASSWORD";  // For your network
 
 // Use your own API key by signing up for a free developer account at https://openweathermap.org/
 String apikey       = "your OWM key";                   // See: https://openweathermap.org/
