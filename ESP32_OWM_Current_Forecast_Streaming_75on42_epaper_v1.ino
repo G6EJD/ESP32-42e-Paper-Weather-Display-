@@ -668,7 +668,6 @@ void Draw_RSSI(int x, int y, int rssi){
 void DrawBattery(int x, int y) {
   uint8_t percentage = 100;
   float voltage = analogRead(35) / 4096.0 * 7.485;
-  voltage = 4;
   if (voltage >= 0 ) { // Only display is there is a valid reading
     if (voltage >= 4.19) percentage = 100;
     else if (voltage < 3.20) percentage = 0;
