@@ -138,7 +138,7 @@ void loop() { // this will never run!
 void begin_sleep(){
   esp_sleep_enable_timer_wakeup(UpdateInterval);
   Serial.println(F("Starting deep-sleep period..."));
-  #ifdef BUILTIN_)LED
+  #ifdef BUILTIN_LED
     pinMode(BUILTIN_LED,INPUT);     // In case it's on, turn output off, sometimes PIN-5 on some boards is used for SPI-SS
     digitalWrite(BUILTIN_LED,HIGH); // In case it's on, turn LED off, as sometimes PIN-5 on some boards is used for SPI-SS
   #endif
