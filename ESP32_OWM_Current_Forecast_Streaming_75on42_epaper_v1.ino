@@ -541,7 +541,7 @@ bool obtain_wx_data(String RequestType) {
 // Problems with stucturing JSON decodes, see here: https://arduinojson.org/assistant/
 bool DecodeWeather(Stream &json_stream, String Type) {
   Serial.print("Creating object and ");
-  DynamicJsonDocument doc(50*1024);
+  DynamicJsonDocument doc(5*1024);
   DeserializationError error = deserializeJson(doc, json_stream);
   if (error) {
     Serial.print(F("deserializeJson() failed: "));
@@ -549,7 +549,7 @@ bool DecodeWeather(Stream &json_stream, String Type) {
     return false;
   }
   // Extract values
-  JsonObject& root = doc.as<JsonObject>();
+  JsonObject root = doc.as<JsonObject>();
   Serial.println(" Decoding " + Type + " data");
   if (Type == "weather") {
     // All Serial.println statements are for diagnostic purposes and not required, remove if not needed 
@@ -578,7 +578,7 @@ bool DecodeWeather(Stream &json_stream, String Type) {
     const char* cod                 = root["cod"]; // "200"
     float message                   = root["message"]; 
     int cnt                         = root["cnt"]; 
-    JsonArray& list                 = root["list"];
+    JsonArray list                  = root["list"];
     Serial.print("\nReceiving Forecast period - "); //------------------------------------------------
     for (byte r=0; r < max_readings; r++) {
       Serial.println("\nPeriod-"+String(r)+"--------------"); 
