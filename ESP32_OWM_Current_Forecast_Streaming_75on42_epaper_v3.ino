@@ -540,7 +540,7 @@ bool obtain_wx_data(String RequestType) {
 // Problems with stucturing JSON decodes, see here: https://arduinojson.org/assistant/
 bool DecodeWeather(Stream &json_stream, String Type) {
   Serial.print("Creating object and ");
-  DynamicJsonDocument doc(5*1024);
+  DynamicJsonDocument doc(15*1024);
   DeserializationError error = deserializeJson(doc, json_stream);
   if (error) {
     Serial.print(F("deserializeJson() failed: "));
