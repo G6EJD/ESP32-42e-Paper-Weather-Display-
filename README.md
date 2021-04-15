@@ -28,3 +28,6 @@ The 'streaming' version requires *** Arduino JSON v6 or above *** it streams the
 Go to Sketch > Include Library... > Manage Libraries.... Then, for each library, put its name into the text field to have its metadata found and choose install.
 
 Compile and upload the code - Enjoy!
+
+Wiring Schematic for ALL Waveshare E-Paper Displays
+![alt_text, width="300"](/Schematic.JPG)
